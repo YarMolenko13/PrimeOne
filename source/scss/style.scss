@@ -78,7 +78,6 @@ $ff: "PT Sans";
 // ОСНОВНОЙ БЛОК
 .header {
 	padding: 29px 0 33px 0;
-
 	background: #fff;
 }
 .header-top {
@@ -115,7 +114,7 @@ $ff: "PT Sans";
 .header-bottom {
 	display: flex;
 	align-items: center;
-	margin-top: -18px;
+	margin-top: -20px;
 	&__column {
 		flex: 0 0 33.333%;
 	}
@@ -124,9 +123,6 @@ $ff: "PT Sans";
 .header-bottom-menu-list {
 	display: flex;
 	justify-content: space-between;
-	li{
-
-	}
 }
 .header-bottom-menu {
 	&__link {
@@ -149,11 +145,119 @@ $ff: "PT Sans";
 		line-height: 25px;
 		text-transform: uppercase;
 		letter-spacing: 7px;
-
 	}
 	&__image {
 		display: inline-block;
 		margin: 13px 0 22px 0;
+	}
+}
+@media (max-width: 760px) {
+
+	.header-bottom {
+		flex-direction: column;
+		&__column {
+			flex: 0 1 100%;
+		}
+	}
+	.header-bottom-menu-list {
+		display: flex;
+		justify-contetn: space-between;
+		transition: all .2s linear;
+			// margin-right: -40px;
+
+		li {
+			padding: 0 20px;
+		}
+	}
+	.header-logo {
+		display: flex;
+		text-align: center;
+		align-items: center;
+		&__text {
+			&:first-child{
+				margin-right: 20px;
+			}			
+			&:last-child{
+				margin-left: 20px;
+			}
+		}
+	}
+}
+.burg-btn {
+	padding: 8px 10px;
+	padding-bottom: 12px;
+}
+.burg-btn span{
+	display: none;
+	margin-top: 10px;
+	width: 30px;
+	height: 2px;
+	background: #000;
+	cursor: pointer;
+	position: relative;
+	&.active {
+		// display: none;
+	}
+	&:after {
+		content: '';
+		width: 30px;
+		height: 2px;
+		background: #000;
+		display: block;
+		position: absolute;
+		top: 10px;
+	}	
+	&:before {
+		content: '';
+		width: 30px;
+		height: 2px;
+		background: #000;
+		display: block;
+		position: absolute;
+		top: -10px;
+	}
+}
+.header-bottom-menu-list.active{
+	display: flex;
+	transition: all .2s linear;
+}
+@media (max-width: 510px) {
+	.header-top {
+		display: none;
+	}
+	.header-bottom-menu-list{
+		display: none;
+		transition: all .2s linear;
+	}
+	.header-bottom {
+		align-items: center;
+		&__column {
+			flex: 0 1 100%;
+			order: 2;
+		}
+		flex-wrap: wrap;
+		// flex-direction: column;
+		&__column:nth-child(1){
+			padding-top: 14px;
+			flex: 0 1 100%;
+			order: 2;
+		}		
+		&__column:nth-child(2){
+			flex: 0 1 100%;
+			order: 1;
+		}
+	}
+	.header-logo {
+		&__image {
+			margin-top: 15px;
+			margin-bottom: 0;
+		}
+		&__text {
+			display: none;
+		}
+	}
+	.burg-btn span{
+		display: block;
 	}
 }
 //=========================================================================================================
@@ -166,8 +270,6 @@ $ff: "PT Sans";
 	@media (max-width: 505px) {
 		& {
 			display: flex;
-			// flex: 0 0 100% !important;
-
 			width: auto;
 			flex-direction: column;
 			&__img{

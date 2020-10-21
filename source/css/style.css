@@ -124,6 +124,12 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
 }
 
+.burg-btn {
+  width: 10px;
+  height: 2px;
+  background: #000;
+}
+
 .header {
   padding: 29px 0 33px 0;
   background: #fff;
@@ -164,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
 .header-bottom {
   display: flex;
   align-items: center;
-  margin-top: -20px;
+  margin-top: -18px;
 }
 .header-bottom__column {
   flex: 0 0 33.333%;
@@ -173,7 +179,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
 }
-
 .header-bottom-menu__link {
   display: flex;
   font-family: "AkzidenzGroteskBQ";
@@ -201,113 +206,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 13px 0 22px 0;
 }
 
-@media (max-width: 760px) {
-  .header-bottom {
-    flex-direction: column;
-  }
-  .header-bottom__column {
-    flex: 0 1 100%;
-  }
-
-  .header-bottom-menu-list {
-    display: flex;
-    justify-contetn: space-between;
-    transition: all 0.2s linear;
-  }
-  .header-bottom-menu-list li {
-    padding: 0 20px;
-  }
-
-  .header-logo {
-    display: flex;
-    text-align: center;
-    align-items: center;
-  }
-  .header-logo__text:first-child {
-    margin-right: 20px;
-  }
-  .header-logo__text:last-child {
-    margin-left: 20px;
-  }
-}
-.burg-btn {
-  padding: 8px 10px;
-  padding-bottom: 12px;
-}
-
-.burg-btn span {
-  display: none;
-  margin-top: 10px;
-  width: 30px;
-  height: 2px;
-  background: #000;
-  cursor: pointer;
-  position: relative;
-}
-.burg-btn span:after {
-  content: "";
-  width: 30px;
-  height: 2px;
-  background: #000;
-  display: block;
-  position: absolute;
-  top: 10px;
-}
-.burg-btn span:before {
-  content: "";
-  width: 30px;
-  height: 2px;
-  background: #000;
-  display: block;
-  position: absolute;
-  top: -10px;
-}
-
-.header-bottom-menu-list.active {
-  display: flex;
-  transition: all 0.2s linear;
-}
-
-@media (max-width: 510px) {
-  .header-top {
-    display: none;
-  }
-
-  .header-bottom-menu-list {
-    display: none;
-    transition: all 0.2s linear;
-  }
-
-  .header-bottom {
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .header-bottom__column {
-    flex: 0 1 100%;
-    order: 2;
-  }
-  .header-bottom__column:nth-child(1) {
-    padding-top: 14px;
-    flex: 0 1 100%;
-    order: 2;
-  }
-  .header-bottom__column:nth-child(2) {
-    flex: 0 1 100%;
-    order: 1;
-  }
-
-  .header-logo__image {
-    margin-top: 15px;
-    margin-bottom: 0;
-  }
-  .header-logo__text {
-    display: none;
-  }
-
-  .burg-btn span {
-    display: block;
-  }
-}
 .private {
   display: flex;
   flex: 0 1 50%;
