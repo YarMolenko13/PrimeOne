@@ -231,7 +231,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .burg-btn {
-  height: 30px;
+  height: 40px;
+  width: 40px;
 }
 
 .burg-btn span {
@@ -242,6 +243,8 @@ h1, h2, h3, h4, h5, h6 {
   background: #000;
   cursor: pointer;
   position: relative;
+  top: 10px;
+  left: 5px;
 }
 .burg-btn span:after {
   content: "";
