@@ -231,8 +231,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .burg-btn {
-  padding: 8px 10px;
-  padding-bottom: 12px;
+  height: 30px;
 }
 
 .burg-btn span {
